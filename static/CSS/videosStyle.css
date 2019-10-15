@@ -1,0 +1,217 @@
+/*-------------------END OF HEADER------------------------------*/
+.videos{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 33%;
+  }
+  .test{
+    display: grid;
+    grid-template-columns: 100% 100% 100%;
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+  }
+  /*---------------------------------------------------------------*/
+  @media only screen
+  and (min-width: 320px) /*Smartphones*/
+  and (max-width: 479px)
+  {
+    .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      grid-column-start: 1;
+      width: 100px;
+      margin-top: 5px;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3%;
+    }
+    li{
+      padding-top: 5%;
+    }
+    /*----------END OF HEADER------------*/
+    iframe{
+      height: 150px;
+      width: 375px;
+    }
+    .test{
+      grid-template-columns: auto;
+      grid-row-gap: 5px;
+    }
+    .videos{
+      margin-top: 0px;
+    }
+  }
+  
+  
+  /*-------------------END OF PORT SMARTPHONE-----------------------------------------*/
+  @media only screen
+  and (min-width: 481px) /*Landscape Smartphones*/
+  and (max-width: 640px)
+  {
+      .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 90px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 100px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    /*----------END OF HEADER------------*/
+    iframe{
+      height: 150px;
+      width: 310%;
+    }
+    .test{
+      grid-template-columns: auto;
+      grid-row-gap: 5px;
+    }
+    .videos{
+      margin-top: 5px
+    }
+  }
+  
+  
+  /*-------------------END OF LANDSCAPE SMARTPHONE-----------------------------------------*/
+  @media only screen
+  and (min-width: 641px) /*Port Tablets*/
+  and (max-width: 960px)
+  {
+    .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 10px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3.8%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    ul{
+      padding-right: 215%;
+    }
+    /*----------END OF HEADER------------*/
+    iframe{
+      height: 150px;
+      width: 100%;
+    }
+    .test{
+      grid-template-columns: 150% 150%;
+      grid-row-gap: 5px;
+    }
+    .videos{
+      margin-top: 10px;
+    }
+  }
+  
+  
+  
+  @media only screen
+  and (min-width: 961px) /*Landscape Tablets*/
+  and (max-width: 1024px)
+  {
+      .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .header a{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 100px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3.8%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    ul{
+      padding-right: 165%;
+    }
+    /*----------END OF HEADER------------*/
+    iframe{
+      height: 150px;
+      width: 100%;
+    }
+    .test{
+      grid-template-columns: 150% 150%;
+      grid-row-gap: 5px;
+    }
+    .videos{
+      margin-top: 10px;
+    }
+  }

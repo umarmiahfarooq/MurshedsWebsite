@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./videostyle.css">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-142401476-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-142401476-1');
+</script>
+{% block head %} {% endblock %}
+</head>
+<body>
+    <div class="header">
+        <img src="{{ url_for('static', filename='Images/MurshedLogoBlack.png')}}" alt="Logo" class="logo" width="130">
+        <i class="fas fa-bars" onclick="toggleMobileMenu()" id="dropdownIcon"></i>
+        <a href="{{ url_for('index') }}" class="hme" id="hme" id="mm" class="headerlinks">HOME</a>
+        <a href="{{ url_for('videos') }}" class="vids" id="videos" id="mm" class="headerlinks">VIDEOS</a>
+        <a href="{{ url_for('enquiries') }}" class="enq" id="enq" id="mm" class="headerlinks">ENQUIRIES</a>
+        <a href="https://www.instagram.com/thegreatmurshed/" target="_blank" class="schls" id="soc" id="mm" class="headerlinks">INSTAGRAM</a>
+    </div>
+
+    <div class="dropdown" id="testingdrop">
+        <ul>
+            <a href="{{ url_for('index') }}" class="mobilemenu"><li>HOME</li></a>
+            <a href="{{ url_for('videos') }}" class="mobilemenu"><li>VIDEOS</li></a>
+            <a href="{{ url_for('enquiries') }}" class="mobilemenu"><li>ENQUIRIES</li></a>
+            <a href="https://www.instagram.com/thegreatmurshed/" class="mobilemenu"><li>INSTAGRAM</li></a>
+            <a href="https://www.instagram.com/umarmiahfarooq/" class="mobilemenu" id="devBy"><li id="debByListItem">A WEBSITE BY <br>@UMARMIAHFAROOQ</li></a>
+        </ul>
+    </div>
+  <style>
+  *{
+  margin: 0;
+}
+body{
+  background: white; /*#171717;*/
+    overflow: hidden;
+}
+html, body {
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    max-width: 100%;
+}
+.logo{
+  transition-duration: 0.6s;
+  grid-row-start: 1;
+  grid-column-start: 3;
+  margin-top: -15px;
+}
+.header{
+  display: grid;
+  grid-template-columns: 10% repeat(12, 6%);
+  grid-template-rows: 95px;
+  font-size: 14px;
+  min-width: 1529px;
+}
+.header{
+  background: transparent;
+  overflow: hidden;
+}
+.header a{
+  color: black;
+  text-decoration: none;
+  line-height: 100px;
+font-family: 'Raleway', sans-serif;
+  grid-row-start: 1;
+}
+.hme{
+  grid-column-start: 7;
+}
+.vids{
+  grid-column-start: 8;
+}
+.enq{
+  grid-column-start: 9;
+}
+.schls{
+  grid-column-start: 10;
+  margin-left: 20%
+}
+.header a:hover {
+    -webkit-transition: all ease-in-out;
+    -moz-transition: all ease-in-out;
+    -ms-transition: all ease-in-out;
+    -o-transition: all ease-in-out;
+    transition: all ease-in-out;
+    color: transparent;
+    text-shadow: 0 0 1px rgba(255,255,255,0.9), 2px 0px 0px #00FFD7, -1px 0px 0px #FF0000;
+    padding: 0 0 0 -1px;
+  transition: 0.4s;
+}
+.dropdownicon{
+  visibility: hidden;
+}
+.header a, .logo {
+  -webkit-animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+          animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fa-bars{
+  visibility: hidden;
+  color: black;
+}
+#testingdrop{
+  visibility: hidden;
+  text-decoration: none;
+  color: black;
+  font-family: 'Raleway', sans-serif;
+  display: grid;
+  grid-template-columns: 55% auto;
+  grid-template-rows: 29em;
+  padding-bottom: 20px;
+  position: fixed;
+  z-index: 1;
+  transition: 0.5s;
+  width: 55%;
+}
+li{
+  list-style-type: none;
+  padding-bottom: 3px;
+  padding-left: 4px;
+  left: -11.4%;
+  grid-column-start: 2;
+  transition: margin-left .5s;
+  z-index: 2;
+}
+ul{
+  width: 100%;
+  left: 3px;
+  grid-column-start: 2;
+  padding-bottom: 560%;
+  padding-right: 82%;
+  background: white/*#171717*/;
+  transition: margin-left .5s;
+  z-index: 2;
+}
+.mobilemenu{
+  text-decoration: none;
+  color: black;
+  grid-column-start: 2;
+  z-index: 2;
+}
+#devBy{
+  color: #ffc800;
+  font-size: 40%;
+  z-index: 2;
+}
+#debByListItem{
+  margin-top: 10%;
+  z-index: 2;
+}</style>
+  <script src="dropdownmenu.js"></script>
+  {% block body %}
+  {% endblock %}
+</body>
+</html>
