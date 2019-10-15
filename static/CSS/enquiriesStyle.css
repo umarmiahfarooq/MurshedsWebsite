@@ -1,0 +1,266 @@
+.title{
+    display: grid;
+    grid-template-columns: 13% 13% 13% 13% 13% 13% 13% 13%;
+    grid-template-rows: 50px 50px 50px;
+  }
+  .enqtit{
+    color: black;
+    font-family: 'Rubik', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 3;
+    z-index: -1;
+  }
+  .icecreamgif{
+    pointer-events: none;
+    width: auto;
+    height: 100px;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 9;
+    grid-row-start: 1;
+  }
+  input[type=text], select, textarea {
+    width: 100%; /* Full width */
+      padding: 12px; /* Some padding */
+      border: 2px solid #ffc800; /* Gray border */
+      border-radius: 4px; /* Rounded borders */
+      box-sizing: border-box; /* Make sure that padding and width stays in place */
+      margin-top: 6px; /* Add a top margin */
+      margin-bottom: 16px; /* Bottom margin */
+      resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+      z-index: -1;
+  }
+  input[type=submit] {
+      background-color: #ffc800;
+      color: black;
+      padding: 12px 20px;
+      border: 2px solid #ffc800;
+      border-radius: 4px;
+      cursor: pointer;
+     font-family: 'Rubik', sans-serif;
+      z-index: -1;
+  }
+  input[type=submit]:hover {
+      background-color: black;
+      color: #ffc800;
+      border: 1px solid #ffc800;
+      font-family: 'Rubik', sans-serif;
+      z-index: -1;
+  }
+  .enqform {
+      border-radius: 5px;
+      background: transparent;
+      padding: 20px;
+      color: black;
+      font-family: 'Rubik', sans-serif;
+      border: 2px #ffc800;
+      z-index: 1;
+  }
+  form{
+    grid-column-start: 3;
+    grid-column-end: 7;
+    grid-row-start: 2;
+  }
+  .enqform, .title{
+    -webkit-animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+            animation: slide-in-fwd-center 0.4s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
+  }
+  @-webkit-keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-fwd-center {
+    0% {
+      -webkit-transform: translateZ(-1400px);
+              transform: translateZ(-1400px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateZ(0);
+              transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+  @media only screen
+  and (min-width: 320px) /*Smartphones*/
+  and (max-width: 479px)
+  {
+    .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      grid-column-start: 1;
+      width: 100px;
+      margin-top: 5px;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3%;
+    }
+    li{
+      padding-top: 5%;
+    }
+    /*----------END OF HEADER------------*/
+    .icecreamgif{
+      visibility: hidden;
+    }
+  }
+  
+  
+  /*-------------------END OF PORT SMARTPHONE-----------------------------------------*/
+  @media only screen
+  and (min-width: 481px) /*Landscape Smartphones*/
+  and (max-width: 640px)
+  {
+      .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 90px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 100px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 3%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    /*----------END OF HEADER------------*/
+    .icecreamgif{
+      visibility: hidden;
+    }
+  }
+  
+  
+  /*-------------------END OF LANDSCAPE SMARTPHONE-----------------------------------------*/
+  @media only screen
+  and (min-width: 641px) /*Port Tablets*/
+  and (max-width: 960px)
+  {
+    .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 10px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%;
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 2.8%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    ul{
+      padding-right: 215%;
+    }
+    /*----------END OF HEADER------------*/
+    .icecreamgif{
+      visibility: hidden;
+    }
+  }
+  
+  
+  
+  @media only screen
+  and (min-width: 961px) /*Landscape Tablets*/
+  and (max-width: 1024px)
+  {
+      .header{
+      grid-template-columns: 14.5% auto;
+      grid-template-rows: 80px;
+      border-bottom: 0.5px solid white;
+      grid-column-gap: 5em;
+    }
+    .headerlinks{
+      visibility: hidden;
+    }
+    .header a{
+      visibility: hidden;
+    }
+    .logo{
+      align-self: center;
+      font-size: 100px;
+      text-align: left;
+      margin-left: 3%;
+      grid-column-start: 1;
+      margin-top: 2%
+    }
+    .fa-bars{
+      visibility: visible;
+      grid-column-start: 2;
+      color:black;
+      font-size: 180%;
+      position: absolute;
+      align-self: center;
+      right: 5%;
+      top: 2.8%;
+    }
+    li{
+      padding-bottom: 5%;
+    }
+    ul{
+      padding-right: 165%;
+    }
+    /*----------END OF HEADER------------*/
+    .icecreamgif{
+      visibility: hidden;
+    }
+  }
