@@ -1,10 +1,14 @@
-{% extends "layout.html" %}
-{% block head %} 
-<title>MURSHED | HOME</title> 
-<link rel="stylesheet" href="{{ url_for('static', filename='CSS/indexStyle.css') }}" type="text/css">
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MURSHED | HOME</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='CSS/indexStyle.css') }}">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+</head>
+<body>
 
-{% block body %}
 <img src="{{ url_for('static', filename='Images/MurshedLogoBlack.png')}}" alt="Murshed Director Music Videos" id="landingName">
 
 <div class="enterButton">
@@ -14,4 +18,6 @@
 <div class="devByContainer">
     <a href="https://instagram.com/umarmiahfarooq" class="developerinstagram"><span class="devbytext">"DEVELOPED BY </span><span class="devInstagramUsername">@UMARMIAHFAROOQ</span>"</a>
 </div>
-{% endblock %}
+
+</body>
+</html>
